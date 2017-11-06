@@ -1,0 +1,6 @@
+# skills section data
+
+label: Ability
+id : cs
+aspects: Can-Do-Attitude, GitHub, Java, Python, Machine Learning
+percentage: 100, 65, 70, 70, 60, 55
