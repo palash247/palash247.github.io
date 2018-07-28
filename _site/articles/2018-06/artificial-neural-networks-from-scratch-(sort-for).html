@@ -9,31 +9,31 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A simple and awesome blog theme powered by jekyll.">
+  <meta name="description" content="What are Artificial Neural Networks?It comprises of Linear Algebra operations, non-linear activations and some optimization of cost function using high schoo...">
   <meta name="keywords" content="Machine Learning, Artificial Intelligence, Python, and Java">
-  <meta name="author" content="Leonids">
+  <meta name="author" content="Artificial Neural Networks from scratch (sort off) | Leonids">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f5f5">
 
   <!-- Twitter Tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Leonids">
-  <meta name="twitter:description" content="A simple and awesome blog theme powered by jekyll.">
+  <meta name="twitter:title" content="Artificial Neural Networks from scratch (sort off) | Leonids">
+  <meta name="twitter:description" content="What are Artificial Neural Networks?It comprises of Linear Algebra operations, non-linear activations and some optimization of cost function using high schoo...">
   <meta name="twitter:image" content="http://localhost:4000/img/leonids-logo.png">
 
   <!-- Open Graph Tags -->
   <meta property="og:type" content="blog">
   <meta property="og:url" content="http://localhost:4000">
-  <meta property="og:title" content="Leonids">
-  <meta property="og:description" content="A simple and awesome blog theme powered by jekyll.">
+  <meta property="og:title" content="Artificial Neural Networks from scratch (sort off) | Leonids">
+  <meta property="og:description" content="What are Artificial Neural Networks?It comprises of Linear Algebra operations, non-linear activations and some optimization of cost function using high schoo...">
   <meta property="og:image" content="http://localhost:4000/img/leonids-logo.png">
-  <title>Leonids</title>
+  <title>Artificial Neural Networks from scratch (sort off) | Leonids</title>
 
   <!-- CSS files -->
   <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://localhost:4000/css/main.css">
 
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)">
   <link rel="alternate" type="application/rss+xml" title="Leonids" href="http://localhost:4000 /feed.xml " />
 
   <!-- Icons -->
@@ -140,76 +140,33 @@
     </div>
     <div class="col s12 m9">
       <div class="post-listing">
-        
-<section class="post">
+        <a class="btn" href= "http://localhost:4000/" >
+  Home
+</a>
+
+
+
+<div id="post">
   <header class="post-header">
-    <p class="post-meta">
-      <span class="post-date">
-        28 JUL 2018
-      </span>
-      
-      •
-      
-        <a class="post-cat" href="http://localhost:4000/categories/#logs">logs</a>
-        
-      
-      
-    </p>
-    <h4>
-      <a href="http://localhost:4000/articles/2018-07/100-days-of-ML-code-logs" class="post-title" title="100 days of ML code logs">100 days of ML code logs</a>
-      
-    </h4>
-
-    
-
-    </header>
-
-    
-    <div class="post-description">
-      <p>
-        <h2 id="date-27072018">Date: 27/07/2018:</h2>
-
-<p>For the day, I revisited the derivation for the backpropagation algorithm. I find myself struggling with writing differential equations for matrices. The only way I could possibly come up with the proper differentiation is by matching the dimensions of the matrices. I don’t know if it’s the correct way of doing Linear Algebra-Calculus, but for now, it is working for me. For reference, I’ve used the first course of Andrew Ng’s Deep Learning specialization from Coursera.</p>
-
-<h2 id="date-28072018">Date: 28/07/2018</h2>
-
-<p>Read an article by Randal J. Barnes about Matrix Differentiation. I found it interesting and now I know how to backpropagate without matching the dimensions of the matrices involved in the differentiation. Then I went back to maths of forward and backward propegation of Deep-L layer neural network from Andrew Ng’s Deep Learning course. Now I feel little more confident about the derivation and I hope I would not forget it anytime soon. I think I should make some flash cards about this real soon.</p>
-
-      </p>
-    </div>
-    
-
-    
-
-</section>
-
-<section class="post">
-  <header class="post-header">
-    <p class="post-meta">
+    <h1 title="Artificial Neural Networks from scratch (sort off)">Artificial Neural Networks from scratch (sort off)</h1>
+    <span class="post-meta">
       <span class="post-date">
         18 JUN 2018
       </span>
-      
       •
-      
-        <a class="post-cat" href="http://localhost:4000/categories/#tutorial">tutorial</a>
-        
-      
-      
-    </p>
-    <h4>
-      <a href="http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)" class="post-title" title="Artificial Neural Networks from scratch (sort off)">Artificial Neural Networks from scratch (sort off)</a>
-      
-    </h4>
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
 
-    
+    </span>
 
-    </header>
+  </header>
 
-    
-    <div class="post-description">
-      <p>
-        <h2 id="what-are-artificial-neural-networks">What are Artificial Neural Networks?</h2>
+  <article class="post-content">
+    <h2 id="what-are-artificial-neural-networks">What are Artificial Neural Networks?</h2>
 
 <p>It comprises of Linear Algebra operations, non-linear activations and some optimization of cost function using high school Calculus to give a computer the capability to learn something from historical data. Let’s try to learn each thing intuitively.</p>
 
@@ -219,16 +176,59 @@
 
 <h4 id="grdient">Grdient:</h4>
 
-<p>A derivative of function \(f(x)\) with respect to \(x\) represents the rate of change of \(f(x)\) with respect to \(x\). For example, if you are given a function \(d(t)\) representing displacement of a car at time \(t\), the derivative of \(d\) will represent the velocity of the car at time \(t\). A graphical intuition of the derivative is a slope of the tangent at f</p>
+<p>A derivative of function \(f(x)\) with respect to \(x\) represents the rate of change of \(f(x)\) with respect to \(x\). For example, if you are given a function \(d(t)\) representing displacement of a car at time \(t\), the derivative of \(d\) will represent the velocity of the car at time \(t\). A graphical intuition of the derivative is a slope of the tangent at f
+<!--more--></p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
 
 
-      </p>
-    </div>
-    
+  </article>
+</div>
 
-    
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
 
-</section>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'palash247';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 
 
         <footer>

@@ -1,7 +1,11 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
-- name: Accenture
-  link: http://www.accenture.com/
-  date: Jan 2017 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
-  job: Application Developer Associate (Java)
+- name: Centurysoft Pvt. Ltd., Pune
+  link: http://www.centurysoft.com/
+  date: Dec 2017 - <i class="fa fa-clock-o" aria-hidden="false" title="Until Now"></i>
+  job: Machine Learning Engineer (Chatbot Development)
 
+- name: Accenture Solutions Pvt. Ltd., Pune
+  link: http://www.accenture.com/
+  date: Jan 2017 - Dec 2017
+  job: Java Developer (REST API Development)

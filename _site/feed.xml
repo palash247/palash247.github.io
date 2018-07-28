@@ -5,9 +5,63 @@
     <description>A simple and awesome blog theme powered by jekyll.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Nov 2017 23:09:17 +0000</pubDate>
-    <lastBuildDate>Mon, 06 Nov 2017 23:09:17 +0000</lastBuildDate>
+    <pubDate>Sat, 28 Jul 2018 16:47:56 +0000</pubDate>
+    <lastBuildDate>Sat, 28 Jul 2018 16:47:56 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>100 days of ML code logs</title>
+        <description>&lt;h2 id=&quot;date-27072018&quot;&gt;Date: 27/07/2018:&lt;/h2&gt;
+
+&lt;p&gt;For the day, I revisited the derivation for the backpropagation algorithm. I find myself struggling with writing differential equations for matrices. The only way I could possibly come up with the proper differentiation is by matching the dimensions of the matrices. I don’t know if it’s the correct way of doing Linear Algebra-Calculus, but for now, it is working for me. For reference, I’ve used the first course of Andrew Ng’s Deep Learning specialization from Coursera.&lt;/p&gt;
+
+&lt;h2 id=&quot;date-28072018&quot;&gt;Date: 28/07/2018&lt;/h2&gt;
+
+&lt;p&gt;Read an article by Randal J. Barnes about Matrix Differentiation. I found it interesting and now I know how to backpropagate without matching the dimensions of the matrices involved in the differentiation. Then I went back to maths of forward and backward propegation of Deep-L layer neural network from Andrew Ng’s Deep Learning course. Now I feel little more confident about the derivation and I hope I would not forget it anytime soon. I think I should make some flash cards about this real soon.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 28 Jul 2018 15:07:19 +0000</pubDate>
+        <link>http://localhost:4000/articles/2018-07/100-days-of-ML-code-logs</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018-07/100-days-of-ML-code-logs</guid>
+        
+        
+        <category>logs</category>
+        
+      </item>
+    
+      <item>
+        <title>Artificial Neural Networks from scratch (sort off)</title>
+        <description>&lt;h2 id=&quot;what-are-artificial-neural-networks&quot;&gt;What are Artificial Neural Networks?&lt;/h2&gt;
+
+&lt;p&gt;It comprises of Linear Algebra operations, non-linear activations and some optimization of cost function using high school Calculus to give a computer the capability to learn something from historical data. Let’s try to learn each thing intuitively.&lt;/p&gt;
+
+&lt;h3 id=&quot;optimization&quot;&gt;Optimization:&lt;/h3&gt;
+
+&lt;p&gt;Given a function \(f(x)\), how would you find a minimum of it with respect \(x\). Turns out &lt;em&gt;Gradient/Derivative&lt;/em&gt; of a function can come handy. So what is Derivative of function?&lt;/p&gt;
+
+&lt;h4 id=&quot;grdient&quot;&gt;Grdient:&lt;/h4&gt;
+
+&lt;p&gt;A derivative of function \(f(x)\) with respect to \(x\) represents the rate of change of \(f(x)\) with respect to \(x\). For example, if you are given a function \(d(t)\) representing displacement of a car at time \(t\), the derivative of \(d\) will represent the velocity of the car at time \(t\). A graphical intuition of the derivative is a slope of the tangent at f
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 18 Jun 2018 15:07:19 +0000</pubDate>
+        <link>http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018-06/artificial-neural-networks-from-scratch-(sort-for)</guid>
+        
+        
+        <category>tutorial</category>
+        
+      </item>
     
   </channel>
 </rss>
