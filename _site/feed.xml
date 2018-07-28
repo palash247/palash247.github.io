@@ -5,21 +5,23 @@
     <description>A simple and awesome blog theme powered by jekyll.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Jul 2018 16:47:56 +0000</pubDate>
-    <lastBuildDate>Sat, 28 Jul 2018 16:47:56 +0000</lastBuildDate>
+    <pubDate>Sat, 28 Jul 2018 16:58:48 +0000</pubDate>
+    <lastBuildDate>Sat, 28 Jul 2018 16:58:48 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>100 days of ML code logs</title>
-        <description>&lt;h2 id=&quot;date-27072018&quot;&gt;Date: 27/07/2018:&lt;/h2&gt;
+        <description>&lt;p&gt;My everyday progress logs of the #100daysofMLCode challenge.&lt;/p&gt;
+
+&lt;h3 id=&quot;date-27072018&quot;&gt;Date: 27/07/2018:&lt;/h3&gt;
 
 &lt;p&gt;For the day, I revisited the derivation for the backpropagation algorithm. I find myself struggling with writing differential equations for matrices. The only way I could possibly come up with the proper differentiation is by matching the dimensions of the matrices. I don’t know if it’s the correct way of doing Linear Algebra-Calculus, but for now, it is working for me. For reference, I’ve used the first course of Andrew Ng’s Deep Learning specialization from Coursera.&lt;/p&gt;
 
-&lt;h2 id=&quot;date-28072018&quot;&gt;Date: 28/07/2018&lt;/h2&gt;
+&lt;h3 id=&quot;date-28072018&quot;&gt;Date: 28/07/2018&lt;/h3&gt;
 
 &lt;p&gt;Read an article by Randal J. Barnes about Matrix Differentiation. I found it interesting and now I know how to backpropagate without matching the dimensions of the matrices involved in the differentiation. Then I went back to maths of forward and backward propegation of Deep-L layer neural network from Andrew Ng’s Deep Learning course. Now I feel little more confident about the derivation and I hope I would not forget it anytime soon. I think I should make some flash cards about this real soon.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 28 Jul 2018 15:07:19 +0000</pubDate>
+        <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2018-07/100-days-of-ML-code-logs</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2018-07/100-days-of-ML-code-logs</guid>
         
