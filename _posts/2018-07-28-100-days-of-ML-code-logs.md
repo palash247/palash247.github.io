@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  100 days of ML code logs
-modified:   2018-07-28 15:07:19
+modified:   2018-07-31 23:00:19
 excerpt: "My everyday progress logs of the #100daysofMLCode challenge."
 categories: [logs]
 comments: false
@@ -29,4 +29,12 @@ Found a way to download assignments from Coursera, as they don't let you redo yo
 
 ### Date: 30/07/2018
 
-Today, I struggled to wake up at 4 am again. Next day I am going to try harder. For the day, I've spent time configuring Twilio with the chatbot I am building for my company. Before that, I was engaged in the generating more stories (conversation flows) for the bot to tackle some mistakes it was doing. Before that when I woke up at 6 am I went through some modular way to implement fully connected NN with any architecture. Tomorrow I am going to try a little harder to wake up at 4. 
+Today, I struggled to wake up at 4 am again. Next day I am going to try harder. For the day, I've spent time configuring Twilio with the chatbot I am building for my company. Before that, I was engaged in the generating more stories (conversation flows) for the bot to tackle some mistakes it was doing. Before that when I woke up at 6 am I went through some modular way to implement fully connected NN with any architecture. Tomorrow I am going to try a little harder to wake up at 4.
+
+### Date: 31/07/2018
+
+The struggle with the early waking up is still on. In the morning I revised L1, L2 Regularization, Dropout for reducing overfitting and for the rest of the day I was stuck with the [Asterisk][Asterisk] configuration for setting up a [Duplex like AI agent][Duplex like AI agent]. Currently, I am learning a way to set up some packages so that a user can call an AI agent and have a meaningful conversation with it. 
+
+
+[Asterisk]:https://www.asterisk.org/
+[Duplex like AI agent]:https://medium.com/rasa-blog/building-your-own-duplex-ai-agent-using-rasa-and-twilio-bbd23c80ed30

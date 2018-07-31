@@ -5,8 +5,8 @@
     <description>A blog for my projects.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Jul 2018 18:04:44 +0000</pubDate>
-    <lastBuildDate>Mon, 30 Jul 2018 18:04:44 +0000</lastBuildDate>
+    <pubDate>Tue, 31 Jul 2018 17:39:32 +0000</pubDate>
+    <lastBuildDate>Tue, 31 Jul 2018 17:39:32 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -28,6 +28,11 @@
 &lt;h3 id=&quot;date-30072018&quot;&gt;Date: 30/07/2018&lt;/h3&gt;
 
 &lt;p&gt;Today, I struggled to wake up at 4 am again. Next day I am going to try harder. For the day, I’ve spent time configuring Twilio with the chatbot I am building for my company. Before that, I was engaged in the generating more stories (conversation flows) for the bot to tackle some mistakes it was doing. Before that when I woke up at 6 am I went through some modular way to implement fully connected NN with any architecture. Tomorrow I am going to try a little harder to wake up at 4.&lt;/p&gt;
+
+&lt;h3 id=&quot;date-31072018&quot;&gt;Date: 31/07/2018&lt;/h3&gt;
+
+&lt;p&gt;The struggle with the early waking up is still on. In the morning I revised L1, L2 Regularization, Dropout for reducing overfitting and for the rest of the day I was stuck with the &lt;a href=&quot;https://www.asterisk.org/&quot;&gt;Asterisk&lt;/a&gt; configuration for setting up a &lt;a href=&quot;https://medium.com/rasa-blog/building-your-own-duplex-ai-agent-using-rasa-and-twilio-bbd23c80ed30&quot;&gt;Duplex like AI agent&lt;/a&gt;. Currently, I am learning a way to set up some packages so that a user can call an AI agent and have a meaningful conversation with it.&lt;/p&gt;
+
 </description>
         <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2018-07/100-days-of-ML-code-logs</link>
