@@ -5,8 +5,8 @@
     <description>A blog for my projects.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Jul 2018 17:39:32 +0000</pubDate>
-    <lastBuildDate>Tue, 31 Jul 2018 17:39:32 +0000</lastBuildDate>
+    <pubDate>Wed, 01 Aug 2018 18:01:42 +0000</pubDate>
+    <lastBuildDate>Wed, 01 Aug 2018 18:01:42 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -32,6 +32,10 @@
 &lt;h3 id=&quot;date-31072018&quot;&gt;Date: 31/07/2018&lt;/h3&gt;
 
 &lt;p&gt;The struggle with the early waking up is still on. In the morning I revised L1, L2 Regularization, Dropout for reducing overfitting and for the rest of the day I was stuck with the &lt;a href=&quot;https://www.asterisk.org/&quot;&gt;Asterisk&lt;/a&gt; configuration for setting up a &lt;a href=&quot;https://medium.com/rasa-blog/building-your-own-duplex-ai-agent-using-rasa-and-twilio-bbd23c80ed30&quot;&gt;Duplex like AI agent&lt;/a&gt;. Currently, I am learning a way to set up some packages so that a user can call an AI agent and have a meaningful conversation with it.&lt;/p&gt;
+
+&lt;h3 id=&quot;date-01082018&quot;&gt;Date: 01/08/2018&lt;/h3&gt;
+
+&lt;p&gt;Finally, woke up at 4 am in the morning. Implemented He Initialization to tackle vanishing/exploding gradients, L2 and Dropout for regularization and then implemented Gradient Check to validate the implementation of backpropogation is correct. In the office, I’ve successfully integrated Twilio’s Programmable Voice &amp;amp; speech recognition with Rasa bot. I am really excited for this and I am surely goint to make a tutorial for this real soon.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>

@@ -33,7 +33,11 @@ Today, I struggled to wake up at 4 am again. Next day I am going to try harder. 
 
 ### Date: 31/07/2018
 
-The struggle with the early waking up is still on. In the morning I revised L1, L2 Regularization, Dropout for reducing overfitting and for the rest of the day I was stuck with the [Asterisk][Asterisk] configuration for setting up a [Duplex like AI agent][Duplex like AI agent]. Currently, I am learning a way to set up some packages so that a user can call an AI agent and have a meaningful conversation with it. 
+The struggle with the early waking up is still on. In the morning I revised L1, L2 Regularization, Dropout for reducing overfitting and for the rest of the day I was stuck with the [Asterisk][Asterisk] configuration for setting up a [Duplex like AI agent][Duplex like AI agent]. Currently, I am learning a way to set up some packages so that a user can call an AI agent and have a meaningful conversation with it.
+
+### Date: 01/08/2018
+
+Finally, woke up at 4 am. Implemented He Initialization to tackle the problem of vanishing/exploding gradients in NNs, then L2 and Dropout to perform regularization and reduce overfitting and then implemented Gradient Check to validate the implementation of backpropagation. In the office, I've successfully integrated Twilio's Programmable Voice & Speech recognition APIs with Rasa chatbot. I am really excited for this project and I am going to make a tutorial for it real soon.
 
 
 [Asterisk]:https://www.asterisk.org/
