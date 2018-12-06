@@ -5,71 +5,122 @@
     <description>A blog for my projects.</description>
     <link>https://palash247.github.io/</link>
     <atom:link href="https://palash247.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Oct 2018 08:21:49 +0000</pubDate>
-    <lastBuildDate>Tue, 30 Oct 2018 08:21:49 +0000</lastBuildDate>
+    <pubDate>Wed, 05 Dec 2018 05:19:40 +0000</pubDate>
+    <lastBuildDate>Wed, 05 Dec 2018 05:19:40 +0000</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>100 days of ML code logs</title>
-        <description>&lt;p&gt;My everyday progress logs of the #100daysofMLCode challenge.&lt;/p&gt;
+        <title>Right way to do Permutations and Combinations</title>
+        <description>&lt;p&gt;So, I was reviewing all my high school stats from Khan Academy because I think my stats has got little rusty, and I got hooked with the way of teaching of Mr. Sal Khan. I remmember how I used to mug up the formulas of permutations and combinations without understanding the actual concept. This article is my version of the uderstanding I got from Khan Academy.&lt;/p&gt;
 
-&lt;h3 id=&quot;date-27072018&quot;&gt;Date: 27/07/2018:&lt;/h3&gt;
+&lt;p&gt;We will first start with a basic introduction how permutation and combination, then we will try to understand how their formulas are derived.&lt;/p&gt;
 
-&lt;p&gt;For the day, I revisited the derivation for the back-propagation algorithm. I struggle with writing differential equations for matrices. The only way I could come up with the proper differentiation is by matching the dimensions of the matrices. I don’t know if it’s the correct way of doing Linear Algebra-Calculus, but for now, it is working for me. For reference, I’ve used the first course of Andrew Ng’s Deep Learning specialization from Coursera.&lt;/p&gt;
+&lt;h4 id=&quot;permutation&quot;&gt;Permutation&lt;/h4&gt;
 
-&lt;h3 id=&quot;date-28072018&quot;&gt;Date: 28/07/2018&lt;/h3&gt;
+&lt;p&gt;It gives the number of ways you can arrange things with emphasis on the &lt;strong&gt;order&lt;/strong&gt;. Best way to understand it is by going through an example. Suppose you’ve been asked to compute how many different sequence of Heads(H) and Tails(T) are possible if you toss a coin three times in a row? I will show you my reasoning behind this&lt;/p&gt;
 
-&lt;p&gt;Read an article by Randal J. Barnes about Matrix Differentiation. I found it interesting and now I know how to backpropagate without matching the dimensions of the matrices involved in the differentiation. Then I went back to the maths of forwarding and backward propagation of Deep-L layer neural network from Andrew Ng’s Deep Learning course. Now I feel a little more confident about the derivation and I hope I would not forget it soon. I think I should make flashcards about this real soon.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;How many positions do I have to arrange the H and T?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: The coin was tossed &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt; times in a row so I have 3 positions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for first position?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: A coin can have two outcomes, H or T, so I have 2 options for first position.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for second position?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: 2, and same goes for the third position.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many ways I can arrange all the options available to me for all the positions?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: Simply multiplying each option should suffice, i.e, &lt;script type=&quot;math/tex&quot;&gt;2*2*2=8&lt;/script&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Are there any possible common sequences in&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h3 id=&quot;date-29072018&quot;&gt;Date: 29/07/2018&lt;/h3&gt;
+&lt;p&gt;The questions I have enlisted above has helped me a lot to arrive at an answers in combinatorics. If you know the number of positions, the number of options for each position and the impact of order, you can tackle any combinatorics question. Let’s step up the difficulty level a little bit and try positions and options method to validate my point.&lt;/p&gt;
 
-&lt;p&gt;Downloaded assignments from Coursera as they don’t let you redo your assignments after completing the certifications. Now, I have a copy of every ipython notebook assignments of Deep Learning course. I don’t know if its illegal, but I find it helpful to solve problems while revising, so I will keep them. For the day, I’ve completed the Deep-L layer NN assignment from the first course of Deep Learning Specialization. And there’s one more project I am working on which allows you to schedule a message on a message platform. Today, I’ve explored different third-party APIs to automate message sending on WhatsApp and then I went with Selenium web driver as it appears to all the third party APIs are doing it the same way. I’ve successfully shared text message through Selenium but then I had to grant the access permission every time I ran the application which sucks. I found solutions for it and I’ve tried some with no luck I will try more soon. Also, I learned how to set up a VNC server on a cheap digital ocean droplet which will help me with this selenium automation. Another thing is I am trying to wake up at 4 am but I am struggling with going to sleep early. I will keep on trying though. That’s it for the day.&lt;/p&gt;
+&lt;p&gt;You have some letters $[F,I,C,D,E]$ and you are asked to calculate the number of 5 letter string that are possible by using them without repeatation.&lt;/p&gt;
 
-&lt;h3 id=&quot;date-30072018&quot;&gt;Date: 30/07/2018&lt;/h3&gt;
+&lt;p&gt;We will try to use the same reasoning we used before,&lt;/p&gt;
 
-&lt;p&gt;Today, I struggled to wake up at 4 am again. Next day I will try harder. For the day, I’ve configured Twilio with the chatbot I am building for my company. Before that, I was engaged in the generating more stories (conversation flows) for the bot to tackle mistakes it was doing. Before that when I woke up at 6 am I went through some modular way to implement fully connected NN with any architecture. Tomorrow I will try a little harder to wake up at 4.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;How many positions do I have to arrange the availabel letters?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: I have 5 positions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for the first positioin?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: 5&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for the second position?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: Since, I have already selected on letter and I can not repeat it again, my set of options is reduced by 1, so I have 4 options now.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for the rest of the positions?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: For position 3, 3 options, for position 2, 2 options and only one option for last position.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many ways I can arrange all the options available?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: &lt;span&gt;&lt;script type=&quot;math/tex&quot;&gt;5*4*3*2*1=120&lt;/script&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h3 id=&quot;date-31072018&quot;&gt;Date: 31/07/2018&lt;/h3&gt;
+&lt;p&gt;See, I told you you can solve any permutation question using this reasoning, still don’t believe me? Let’s step up the difficulty little more. What if, in the previous question, you had only 3 positions instead of 5?&lt;/p&gt;
 
-&lt;p&gt;The struggle with the early waking up is still on. In the morning I revised L1, L2 Regularization, Dropout for reducing over-fitting and for the rest of the day I was stuck with the [Asterisk][Asterisk] configuration for setting up a [Duplex like AI agent][Duplex like AI agent]. I am learning a way to set up packages so that a user can call an AI agent and have a meaningful conversation with it.
-[Asterisk]:https://www.asterisk.org/
-[Duplex like AI agent]:https://medium.com/rasa-blog/building-your-own-duplex-ai-agent-using-rasa-and-twilio-bbd23c80ed30
-### Date: 01/08/2018&lt;/p&gt;
+&lt;p&gt;Now, I am going to copy paste most of the stuff from above.&lt;/p&gt;
 
-&lt;p&gt;Finally, woke up at 4 am. Implemented He Initialization to tackle the problem of vanishing/exploding gradients in NNs, then L2 and Dropout to perform regularization and reduce over-fitting and then implemented Gradient Check to validate the implementation of back-propagation. In the office, I’ve successfully integrated Twilio’s Programmable Voice &amp;amp; Speech recognition APIs with Rasa chatbot. I am really excited about this project and I will make a tutorial for it real soon.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;How many positions do I have to arrange the availabel letters?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: I have 3 positions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for the first positioin?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: 5&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for the second position?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: Since, I have already selected on letter and I can not repeat it again, my set of options is reduced by &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;, so I have 4 options now.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many options do I have for the third position?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: For position &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt; options are available.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many ways I can arrange all the options available?
+    &lt;ul&gt;
+      &lt;li&gt;Ans: &lt;script type=&quot;math/tex&quot;&gt;5*4*3=60&lt;/script&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h3 id=&quot;date-30102018&quot;&gt;Date: 30/10/2018&lt;/h3&gt;
-&lt;p&gt;#### Slept: 11:30 pm
-#### Woke up: 5:10 am&lt;/p&gt;
+&lt;p&gt;The only differece we have here is we’ve stopped at third position.&lt;/p&gt;
 
-&lt;p&gt;Starting the challenge again. I was expecting too much from myself which resulted in me being depressed and guilty of not doing everything that is possible. I’ve stopped smoking a month ago and also started working out at least 6 days a weak. Recently, I am feeling a little better about myself and hence I want to continue this challenge from where I left.&lt;/p&gt;
-
-&lt;p&gt;Learning from previous mistakes, I’ve changed the definition of a successful day. It’s only minimum 1 hour of focused work on machine learning which makes up the successful day. Anything extra would be a bonus.&lt;/p&gt;
-
-&lt;p&gt;Wrote stories for a chatbot (office work). Read about &lt;a href=&quot;https://medium.freecodecamp.org/these-tools-will-help-you-write-clean-code-da4b5401f68e&quot;&gt;how to manage multiple git/bitbucket SSH keys on a single machine&lt;/a&gt;. And posted on the blog again.&lt;/p&gt;
-
-&lt;p&gt;Today’s target:&lt;/p&gt;
-
-&lt;p&gt;Primary:
-1. Complete the chatbot
-2. Read at least two chapters of Pandas for data analysis.
-3. Run 2 km
-4. Go to Gym
-5. Complete the backlog reprots.&lt;/p&gt;
-
-&lt;p&gt;May be:
-5. Find a way to integrate any type of task planner in the jekyll theme.
-6. Integrate it with current theme.&lt;/p&gt;
-
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vT7iaGro_WSdFFE2M1ttT_x6Q9vp_p8I1lgJQ2Wl5OSukFrXgKmoyPPSFjDCyCZ23MtSgFWeVdhetBp/pubhtml?widget=true&amp;amp;headers=false&quot;&gt;
-&lt;/iframe&gt;
+&lt;p&gt;Let’s step up the difficulty again. What if you had some common letters in sample list to choose from? Consider the list $[F,I,C,D,C]$, you have two $C$ and other letters are unique. What is the total number of strings of length 3 that are possible using the elements of given list once. (Note: As $C$ appearse two times, you can use it two times.)&lt;/p&gt;
 </description>
-        <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
-        <link>https://palash247.github.io/articles/2018-07/100-days-of-ML-code-logs</link>
-        <guid isPermaLink="true">https://palash247.github.io/articles/2018-07/100-days-of-ML-code-logs</guid>
+        <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+        <link>https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations</link>
+        <guid isPermaLink="true">https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations</guid>
         
         
-        <category>logs</category>
+        <category>maths</category>
+        
+        <category>statistics</category>
         
       </item>
     

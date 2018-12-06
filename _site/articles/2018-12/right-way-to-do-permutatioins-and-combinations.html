@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Right way to do Permutations and Combinations.">
+  <meta name="keywords" content="Machine Learning, Artificial Intelligence, Python, Java, and Deep Learning">
+  <meta name="author" content="Right way to do Permutations and Combinations | Palash Karmore">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Right way to do Permutations and Combinations | Palash Karmore">
+  <meta name="twitter:description" content="Right way to do Permutations and Combinations.">
+  <meta name="twitter:image" content="https://palash247.github.io/img/leonids-logo.png">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="https://palash247.github.io">
+  <meta property="og:title" content="Right way to do Permutations and Combinations | Palash Karmore">
+  <meta property="og:description" content="Right way to do Permutations and Combinations.">
+  <meta property="og:image" content="https://palash247.github.io/img/leonids-logo.png">
+  <title>Right way to do Permutations and Combinations | Palash Karmore</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://palash247.github.io/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://palash247.github.io/css/main.css">
+
+  <link rel="canonical" href="https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations">
+  <link rel="alternate" type="application/rss+xml" title="Palash Karmore" href="https://palash247.github.io /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="https://palash247.github.io/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="https://palash247.github.io/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <img src="https://palash247.github.io/img/palash-dp.png" alt="" class="avatar">
+  
+  <a href="https://palash247.github.io/" class="author_name">Palash Karmore</a>
+  <span class="author_job">Machine Learning | Python </span>
+  <span class="author_bio mbm">I solve problems.</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://palash247.github.io/">home</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://palash247.github.io/archive/">Archive</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://palash247.github.io/categories/">Categories</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://palash247.github.io/resume/">Resume</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://palash247.github.io/tags/">Tags</a>
+        
+      </li>
+       
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('palashkarmore@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    <li><a href="http://twitter.com/palash247" class="social-link-item" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
+    <li><a href="http://facebook.com/palash247" class="social-link-item" target="_blank"><i class="fa fa-fw fa-facebook"></i></a></li>
+    
+    <li><a href="http://linkedin.com/in/palash-karmore" class="social-link-item" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a></li>
+    
+    
+    
+    <li><a href="http://github.com/palash247" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "https://palash247.github.io/" >
+  Home
+</a>
+
+<div class="post-image-feature">
+  <img class="feature-image" src=
+  
+  "https://raw.githubusercontent.com/palash247/palash247.github.io/master/img/rubik.png"
+  
+  alt="Right way to do Permutations and Combinations feature image">
+
+  
+  <span class="image-credit">Photo Credit: <a href="https://pixabay.com/en/users/aitoff-388338/">Andrew Martin</a></span>
+  
+</div><!-- /.image-wrap -->
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="Right way to do Permutations and Combinations">Right way to do Permutations and Combinations</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        5 DEC 2018
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    4 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>So, I was reviewing all my high school stats from Khan Academy because I think my stats has got little rusty, and I got hooked with the way of teaching of Mr. Sal Khan. I remmember how I used to mug up the formulas of permutations and combinations without understanding the actual concept. This article is my version of the uderstanding I got from Khan Academy.</p>
+
+<p>We will first start with a basic introduction how permutation and combination, then we will try to understand how their formulas are derived.</p>
+
+<h4 id="permutation">Permutation</h4>
+
+<p>It gives the number of ways you can arrange things with emphasis on the <strong>order</strong>. Best way to understand it is by going through an example. Suppose you’ve been asked to compute how many different sequence of Heads(H) and Tails(T) are possible if you toss a coin three times in a row? I will show you my reasoning behind this</p>
+
+<ol>
+  <li>How many positions do I have to arrange the H and T?
+    <ul>
+      <li>Ans: The coin was tossed <script type="math/tex">3</script> times in a row so I have 3 positions.</li>
+    </ul>
+  </li>
+  <li>How many options do I have for first position?
+    <ul>
+      <li>Ans: A coin can have two outcomes, H or T, so I have 2 options for first position.</li>
+    </ul>
+  </li>
+  <li>How many options do I have for second position?
+    <ul>
+      <li>Ans: 2, and same goes for the third position.</li>
+    </ul>
+  </li>
+  <li>How many ways I can arrange all the options available to me for all the positions?
+    <ul>
+      <li>Ans: Simply multiplying each option should suffice, i.e, <script type="math/tex">2*2*2=8</script></li>
+    </ul>
+  </li>
+  <li>Are there any possible common sequences in</li>
+</ol>
+
+<p>The questions I have enlisted above has helped me a lot to arrive at an answers in combinatorics. If you know the number of positions, the number of options for each position and the impact of order, you can tackle any combinatorics question. Let’s step up the difficulty level a little bit and try positions and options method to validate my point.</p>
+
+<p>You have some letters $[F,I,C,D,E]$ and you are asked to calculate the number of 5 letter string that are possible by using them without repeatation.</p>
+
+<p>We will try to use the same reasoning we used before,</p>
+
+<ol>
+  <li>How many positions do I have to arrange the availabel letters?
+    <ul>
+      <li>Ans: I have 5 positions.</li>
+    </ul>
+  </li>
+  <li>How many options do I have for the first positioin?
+    <ul>
+      <li>Ans: 5</li>
+    </ul>
+  </li>
+  <li>How many options do I have for the second position?
+    <ul>
+      <li>Ans: Since, I have already selected on letter and I can not repeat it again, my set of options is reduced by 1, so I have 4 options now.</li>
+    </ul>
+  </li>
+  <li>How many options do I have for the rest of the positions?
+    <ul>
+      <li>Ans: For position 3, 3 options, for position 2, 2 options and only one option for last position.</li>
+    </ul>
+  </li>
+  <li>How many ways I can arrange all the options available?
+    <ul>
+      <li>Ans: <span><script type="math/tex">5*4*3*2*1=120</script></span></li>
+    </ul>
+  </li>
+</ol>
+
+<p>See, I told you you can solve any permutation question using this reasoning, still don’t believe me? Let’s step up the difficulty little more. What if, in the previous question, you had only 3 positions instead of 5?</p>
+
+<p>Now, I am going to copy paste most of the stuff from above.</p>
+
+<ol>
+  <li>How many positions do I have to arrange the availabel letters?
+    <ul>
+      <li>Ans: I have 3 positions.</li>
+    </ul>
+  </li>
+  <li>How many options do I have for the first positioin?
+    <ul>
+      <li>Ans: 5</li>
+    </ul>
+  </li>
+  <li>How many options do I have for the second position?
+    <ul>
+      <li>Ans: Since, I have already selected on letter and I can not repeat it again, my set of options is reduced by <script type="math/tex">1</script>, so I have 4 options now.</li>
+    </ul>
+  </li>
+  <li>How many options do I have for the third position?
+    <ul>
+      <li>Ans: For position <script type="math/tex">3</script>, <script type="math/tex">3</script> options are available.</li>
+    </ul>
+  </li>
+  <li>How many ways I can arrange all the options available?
+    <ul>
+      <li>Ans: <script type="math/tex">5*4*3=60</script></li>
+    </ul>
+  </li>
+</ol>
+
+<p>The only differece we have here is we’ve stopped at third position.</p>
+
+<p>Let’s step up the difficulty again. What if you had some common letters in sample list to choose from? Consider the list $[F,I,C,D,C]$, you have two $C$ and other letters are unique. What is the total number of strings of length 3 that are possible using the elements of given list once. (Note: As $C$ appearse two times, you can use it two times.)</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=https://palash247.github.io/articles/2018-12/right-way-to-do-permutatioins-and-combinations" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'palash247';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+        <footer>
+  &copy; 2018 Palash Karmore. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://palash247.github.io/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://palash247.github.io/js/main.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56347465-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
