@@ -223,3 +223,4 @@ result = adder(6,7)
 INFO 2019-01-29 22:45:30,860 Function called: adder, with parameters: (6, 7)
 ~~~
 
+If you find any mistake in above code please comment down below I'll be happy to fix it immediately.
