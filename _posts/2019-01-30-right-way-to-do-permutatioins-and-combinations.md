@@ -3,7 +3,8 @@ layout: post
 title:  Right way to do Permutations and Combinations
 modified:   2019-01-30 23:00:19
 excerpt: "I was reviewing all my high school stats from Khan Academy because I think my stats have got little rusty, and I got hooked with the way of teaching of Mr. Sal Khan. I remember how I used to mug up the formulas of permutations and combinations without understanding the actual concept. This article is my version of the comprehension I got from The Khan Academy."
-categories: [maths,statistics]
+categories: [statistics]
+tags: [maths, statistics, permutations, combinations, combinatorics]]
 comments: true
 share: true
 pinned: false

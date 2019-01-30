@@ -2,8 +2,9 @@
 layout: post
 title:  "Decorators in Pyhton"
 modified:   2019-01-29 23:00:19
-excerpt: "Decorators in Pyhton"
-categories: [python, programming]
+excerpt: "Decorators are the Functions/Classes which are used to extend the behavior of a function."
+categories: [python]
+tags: [python, programming, decorators]
 comments: true
 share: true
 pinned: false
@@ -16,7 +17,7 @@ pinned: false
 
 ## Decorators
 
-Decorators are the Functions/Classes which takes other functions as input to add extra functionality to them. Decorators usually wrap around the original function.
+Decorators are the Functions/Classes which are used to extend the behavior of a function.
 
 ## Why use them?
 
