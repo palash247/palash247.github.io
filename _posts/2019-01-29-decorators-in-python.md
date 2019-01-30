@@ -16,16 +16,16 @@ pinned: false
 
 ## Decorators
 
-Functions/Classes which takes other functions as input to adds extra functionality to them. Decorators usually wraps around the original function.
+Decorators are the Functions/Classes which takes other functions as input to add extra functionality to them. Decorators usually wrap around the original function.
 
 ## Why use them?
 
-1. Suppose you want add some common functionality in every function of your project. You can use a decorator to abstract the common code for this functionality and simply wrap it around the every function. This will save you from repeating your code.
+1. Suppose you want to add some common functionality in every function of your project. You can use a decorator to abstract the common code for this functionality and simply wrap it around every function. This will save you from repeating your code.
 2. To modify a function without touching the original code of the function.
 
 ## How to use them?
 
-Their are, in general two ways to define the decorators, using a class and using a function, prior being least common way.
+There are, in general, two ways to define the decorators, using a class and using a function, prior being a least common way.
 
 ### Decorator function:
 Here is the simple example of the decorator function.
@@ -66,8 +66,8 @@ speaker()
 print()
 
 # Printing name of the functions
-print(f'Function name is {speaker.__name__}')
-print(f'Function name is {printer.__name__}')
+print(f'The function name is {speaker.__name__}')
+print(f'The function name is {printer.__name__}')
 ~~~
 ~~~
 # OUTPUT
@@ -79,16 +79,16 @@ EXTAAAAA FUNCTIONALITY!!!
 I LOVE SPEAKING!!
 AGAIN EXTAAAAA FUNCTIONALITY!!!
 
-Function name is wrapper
-Function name is wrapper
+The function name is wrapper
+The function name is wrapper
 ~~~
 
 #### Observations:
 
 1. Function `decorator` has taken a function `original_function` as input and wrapped it with other function defined inside it.
 2. There are two ways to wrap a function, 1. by annotating it with the decorator's name (line 19-21) or 2. by directly calling the decorator with original function as input and then calling the returned function (line 24-28).
-3. `printer` and `speaker` both has the extra functionality we intended to add.
-4. `printer.__name__` and `speaker.__name__`  both has name `wrapper` which means the original functions did not retain their attributes. This can be fixed using a module in `functools` named `wraps` as follows. 
+3. `printer` and `speaker` both have the extra functionality we intended to add.
+4. `printer.__name__` and `speaker.__name__`  both have name `wrapper` which means the original functions did not retain their attributes. This can be fixed using a module in `functools` named `wraps` as follows. 
 
 ~~~python
 from functools import wraps
@@ -113,7 +113,7 @@ def speaker():
 
 speaker()
 print()
-print(f'Function name is {speaker.__name__}')
+print(f'The function name is {speaker.__name__}')
 ~~~
 ~~~
 # OUTPUT
@@ -121,10 +121,10 @@ EXTAAAAA FUNCTIONALITY!!!
 I LOVE SPEAKING!!
 AGAIN EXTAAAAA FUNCTIONALITY!!!
 
-Function name is speaker
+The function name is speaker
 ~~~
 
-Now, what if our function had some arguments. Let's try same decorator on a function with arguments.
+Now, what if our function had some arguments. Let's try the same decorator on a function with arguments.
 
 ~~~python
 @decorator
@@ -181,7 +181,7 @@ I LOVE PRINTING!!!
 AGAIN EXTAAAAA FUNCTIONALITY!!!
 ~~~
 
-Now let's try making same decorator using a class. The trick is to overwrite the `__call__` method of the decorator class with the wrapper function of your choice. `__call__` method allows the class's instance to be called as a function.
+Now let's try making the same decorator using a class. The trick is to overwrite the `__call__` method of the decorator class with the wrapper function of your choice. `__call__` method allows the class's instance to be called as a function.
 
 ### Decorator class
 
@@ -247,7 +247,7 @@ In the earlier section, we passed an argument to a decorator `wraps`. Also, if y
 
 We nest the existing decorator with another decorator function which will accept the required argument and then this argument will be available for every function inside the decorator.
 
-Let's see it in example: A decorator which takes a number as argument and if the number is greater than 5 it calls the original function otherwise it does not calls it.
+Let's see it in an example: A decorator which takes a number as argument and if the number is greater than 5 it calls the original function otherwise it does not calls it.
 
 ~~~python
 # Decorator function which takes a number as an argument
