@@ -157,7 +157,7 @@
       <span class="read-time" title="Estimated read time">
   
   
-    6 mins read
+    10 mins read
   
 </span>
 
@@ -168,13 +168,13 @@
   <article class="post-content">
     <h2 id="decorators">Decorators</h2>
 
-<p>Functions/Classes which takes other functions as input to adds extra functionality to them. Decorators usually wraps arround the original function.</p>
+<p>Functions/Classes which takes other functions as input to adds extra functionality to them. Decorators usually wraps around the original function.</p>
 
 <h2 id="why-use-them">Why use them?</h2>
 
 <ol>
-  <li>Suppose you want add some common functionality in every function of your project. You can use a decorator to apstract the common code for this functionality and simply wrap it around the every function. This will save you from repeating your code.</li>
-  <li>To modify a fuction without touching the original code of the function.</li>
+  <li>Suppose you want add some common functionality in every function of your project. You can use a decorator to abstract the common code for this functionality and simply wrap it around the every function. This will save you from repeating your code.</li>
+  <li>To modify a function without touching the original code of the function.</li>
 </ol>
 
 <h2 id="how-to-use-them">How to use them?</h2>
@@ -220,23 +220,19 @@
 34
 35
 36
-37
-38
-39
-40
-41
-42
-43
-44
-45</pre></td><td class="code"><pre><span class="c"># Defining a decorator.</span>
-<span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">original_function</span><span class="p">):</span> <span class="c"># Decorator takes the original function as argument</span>
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span> <span class="c"># For now wrappern is not returning None</span>
+37</pre></td><td class="code"><pre><span class="c"># Defining a decorator.</span>
+<span class="c"># Decorator takes the original function as argument</span>
+<span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">original_function</span><span class="p">):</span>
+    <span class="c"># For now wrapper is not returning None</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
-        <span class="n">original_function</span><span class="p">()</span> <span class="c"># Original function gets called here.</span>
+        <span class="c"># Original function gets called here.</span>
+        <span class="n">original_function</span><span class="p">()</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"AGAIN EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapper</span> <span class="c"># Wrapper function is returned.</span>
+    <span class="c"># Wrapper function is returned.</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="c"># Defining a function with limited functionality without annoting with the decorator.</span>
+<span class="c"># Defining a function with limited functionality without annotating with the decorator.</span>
 <span class="k">def</span> <span class="nf">printer</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"I LOVE PRINTING!!"</span><span class="p">)</span>
 
@@ -259,33 +255,44 @@
 <span class="k">print</span><span class="p">()</span>
 
 <span class="c"># Printing name of the functions</span>
-<span class="k">print</span><span class="p">(</span><span class="n">speaker</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">printer</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Function name is {speaker.__name__}'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Function name is {printer.__name__}'</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre># OUTPUT
+EXTAAAAA FUNCTIONALITY!!!
+I LOVE PRINTING!!
+AGAIN EXTAAAAA FUNCTIONALITY!!!
 
-<span class="c"># OUTPUT</span>
-<span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-<span class="n">I</span> <span class="n">LOVE</span> <span class="n">PRINTING</span><span class="err">!!</span>
-<span class="n">AGAIN</span> <span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
+EXTAAAAA FUNCTIONALITY!!!
+I LOVE SPEAKING!!
+AGAIN EXTAAAAA FUNCTIONALITY!!!
 
-<span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-<span class="n">I</span> <span class="n">LOVE</span> <span class="n">SPEAKING</span><span class="err">!!</span>
-<span class="n">AGAIN</span> <span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-
-<span class="n">wrapper</span>
-<span class="n">wrapper</span>
+Function name is wrapper
+Function name is wrapper
 </pre></td></tr></tbody></table>
 </div>
 </div>
 
 <h4 id="observations">Observations:</h4>
+
 <ol>
   <li>Function <code class="highlighter-rouge">decorator</code> has taken a function <code class="highlighter-rouge">original_function</code> as input and wrapped it with other function defined inside it.</li>
-  <li>There are two ways to wrap a function, 1. by annotating it with the decorator’s name (line 15-17) or 2. by directly calling the decorator with original function as input and then calling the returned function (line 19-24).</li>
+  <li>There are two ways to wrap a function, 1. by annotating it with the decorator’s name (line 19-21) or 2. by directly calling the decorator with original function as input and then calling the returned function (line 24-28).</li>
   <li><code class="highlighter-rouge">printer</code> and <code class="highlighter-rouge">speaker</code> both has the extra functionality we intended to add.</li>
-  <li><code class="highlighter-rouge">func.__name__</code> and <code class="highlighter-rouge">speaker.__name__</code>  both has name wrapper.</li>
+  <li><code class="highlighter-rouge">printer.__name__</code> and <code class="highlighter-rouge">speaker.__name__</code>  both has name <code class="highlighter-rouge">wrapper</code> which means the original functions did not retain their attributes. This can be fixed using a module in <code class="highlighter-rouge">functools</code> named <code class="highlighter-rouge">wraps</code> as follows.</li>
 </ol>
-
-<p>This was too simple, what if our function had some arguments. Let’s try same decorator on a function with arguments.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -298,22 +305,273 @@
 9
 10
 11
-12</pre></td><td class="code"><pre><span class="nd">@decorator</span>
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="c"># Defining a decorator.</span>
+<span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">original_function</span><span class="p">):</span> <span class="c"># Decorator takes the original function as argument</span>
+    <span class="c"># Using a  decorator inside decorators to preserve attributes of original function.</span>
+    <span class="c"># Notice we are passing the original function to the wraps.</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">original_function</span><span class="p">)</span>
+    <span class="c"># For now wrapper is not returning None</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
+        <span class="c"># Original function gets called here.</span>
+        <span class="n">original_function</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"AGAIN EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
+    <span class="c"># Wrapper function is returned.</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@decorator</span>
+<span class="k">def</span> <span class="nf">speaker</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"I LOVE SPEAKING!!"</span><span class="p">)</span>
+
+<span class="n">speaker</span><span class="p">()</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Function name is {speaker.__name__}'</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre># OUTPUT
+EXTAAAAA FUNCTIONALITY!!!
+I LOVE SPEAKING!!
+AGAIN EXTAAAAA FUNCTIONALITY!!!
+
+Function name is speaker
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Now, what if our function had some arguments. Let’s try same decorator on a function with arguments.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="nd">@decorator</span>
 <span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{a} + {b} = {a+b}'</span><span class="p">)</span>
 
 <span class="n">adder</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="c"># OUTPUT</span>
-<span class="o">---------------------------------------------------------------------------</span>
-<span class="nb">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
-<span class="o">----&gt;</span> <span class="n">adder</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="nb">TypeError</span><span class="p">:</span> <span class="n">wrapper</span><span class="p">()</span> <span class="n">takes</span> <span class="mi">0</span> <span class="n">positional</span> <span class="n">arguments</span> <span class="n">but</span> <span class="mi">2</span> <span class="n">were</span> <span class="n">given</span>
-
 </pre></td></tr></tbody></table>
 </div>
 </div>
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre># OUTPUT
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+----&gt; adder(3,4)
+
+TypeError: wrapper() takes 0 positional arguments but 2 were given
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
 <p>This error makes sense because we are, in a way, calling the wrapper function and we have defined it to take 0 arguments. Let’s modify it take any number of arguments.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="c"># Redefining our decorator</span>
+<span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">original_function</span><span class="p">):</span>
+    <span class="c"># Receive any number of arguments</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
+        <span class="c"># Forward same arguments to the original function</span>
+        <span class="n">original_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"AGAIN EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
+    <span class="c"># Wrapper function is returned.</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="c"># Try executing functions with and without arguments.</span>
+<span class="nd">@decorator</span>
+<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{a} + {b} = {a+b}'</span><span class="p">)</span>
+
+<span class="nd">@decorator</span>
+<span class="k">def</span> <span class="nf">printer</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"I LOVE PRINTING!!!"</span><span class="p">)</span>
+
+<span class="c"># Call function with arguments</span>
+<span class="n">adder</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c"># Call function without  arguments</span>
+<span class="n">printer</span><span class="p">()</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre># OUTPUT:
+EXTAAAAA FUNCTIONALITY!!!
+3 + 4 = 7
+AGAIN EXTAAAAA FUNCTIONALITY!!!
+EXTAAAAA FUNCTIONALITY!!!
+I LOVE PRINTING!!!
+AGAIN EXTAAAAA FUNCTIONALITY!!!
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Now let’s try making same decorator using a class. The trick is to overwrite the <code class="highlighter-rouge">__call__</code> method of the decorator class with the wrapper function of your choice. <code class="highlighter-rouge">__call__</code> method allows the class’s instance to be called as a function.</p>
+
+<h3 id="decorator-class">Decorator class</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">decorator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">original_func</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">original_func</span> <span class="o">=</span> <span class="n">original_func</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
+        <span class="c"># Forward same arguments to the original function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">original_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"AGAIN EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
+
+<span class="c"># Set the decorator</span>
+<span class="nd">@decorator</span>
+<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{a} + {b} = {a+b}'</span><span class="p">)</span>
+
+<span class="c"># Call the decorated function</span>
+<span class="n">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c"># OUTPUT:</span>
+<span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
+<span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">AGAIN</span> <span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Let’s do something useful now. We will write a decorator which when wrapped around a function, logs the function call in a log file named after the function name itself.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">func_logger</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">logging</span>
+    <span class="c"># Define formating string</span>
+    <span class="n">FORMAT</span> <span class="o">=</span> <span class="s">'</span><span class="si">%(levelname)</span><span class="s">s </span><span class="si">%(asctime)</span><span class="s">s </span><span class="si">%(message)</span><span class="s">s'</span>
+    <span class="c"># Set basic configuration</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+        <span class="n">format</span><span class="o">=</span><span class="n">FORMAT</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="n">f</span><span class="s">'{func.__name__}.log'</span><span class="p">,</span>
+        <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
+        <span class="p">)</span>
+    <span class="c"># Set the wrapper</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s">'Function called: {func.__name__}, with parameters: {args}'</span><span class="p">)</span>
+        <span class="c"># Execute the original function and return the result</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="c"># Return the wrapper</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="c"># Set the decorator</span>
+<span class="nd">@func_logger</span>
+<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="c"># Call the function</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">adder</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre># Contents of adder.log
+INFO 2019-01-29 22:45:30,860 Function called: adder, with parameters: (6, 7)
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>In the earlier section, we passed an argument to a decorator <code class="highlighter-rouge">wraps</code>. Also, if you are familiar with flask, you must have seen the <code class="highlighter-rouge">@app.route('\')</code> decorator which takes the endpoint as an argument. How do you make the decorators with arguments?</p>
+
+<p>We nest the existing decorator with another decorator function which will accept the required argument and then this argument will be available for every function inside the decorator.</p>
+
+<p>Let’s see it in example: A decorator which takes a number as argument and if the number is greater than 5 it calls the original function otherwise it does not calls it.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -342,105 +600,49 @@
 25
 26
 27
-28
-29
-30
-31
-32
-33</pre></td><td class="code"><pre><span class="c"># Redefining our decorator</span>
-<span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">original_function</span><span class="p">):</span> 
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c"># Recieve any number of arguments</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
-        <span class="n">original_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="c"># Forward same arguments to the original function</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"AGAIN EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapper</span> <span class="c"># Wrapper function is returned.</span>
+28</pre></td><td class="code"><pre><span class="c"># Decorator function which takes a number as an argument</span>
+<span class="k">def</span> <span class="nf">conditional_decorator</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="c"># Decorator which takes the function as argument</span>
+    <span class="k">def</span> <span class="nf">original_decorator</span><span class="p">(</span><span class="n">original_function</span><span class="p">):</span>
+        <span class="c"># Wrapper which executes the original function based on a condition</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">original_function</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"The function {original_function.__name__} did not execute"</span><span class="p">)</span>
+        <span class="c"># Original decorator returns the wrapper</span>
+        <span class="k">return</span> <span class="n">wrapper</span>
+    <span class="c"># Outer decorator returns the original decorator</span>
+    <span class="k">return</span> <span class="n">original_decorator</span>
 
-<span class="c"># Try execturing functions with and without arguments.</span>
-<span class="nd">@decorator</span>
-<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{a} + {b} = {a+b}'</span><span class="p">)</span>
-
-<span class="nd">@decorator</span>
+<span class="c"># Using conditional_decorator 6</span>
+<span class="nd">@conditional_decorator</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">printer</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"I LOVE PRINTING!!!"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"I LOVE PRINTING!!"</span><span class="p">)</span>
 
-<span class="c"># Call function with arguments</span>
-<span class="n">adder</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="c"># Using conditional_decorator 4</span>
+<span class="nd">@conditional_decorator</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">speaker</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"I LOVE SPEAKING!!"</span><span class="p">)</span>
 
-<span class="c"># Call function without  arguments</span>
 <span class="n">printer</span><span class="p">()</span>
-
-<span class="c"># OUTPUT:</span>
-
-<span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-<span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">AGAIN</span> <span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-<span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-<span class="n">I</span> <span class="n">LOVE</span> <span class="n">PRINTING</span><span class="err">!!!</span>
-<span class="n">AGAIN</span> <span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-
-
+<span class="k">print</span><span class="p">()</span>
+<span class="n">speaker</span><span class="p">()</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
-
-<p>Now let’s try making same decorator using a class. The trick is to overwrite the <code class="highlighter-rouge">__call__</code> method of the decorator class with the wrapper function of your choice. <code class="highlighter-rouge">__call__</code> method allows the class’s instance to be called as a function.</p>
-
-<h3 id="decorator-class">Decorator class</h3>
-
 <div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">decorator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">original_func</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">original_func</span> <span class="o">=</span> <span class="n">original_func</span>
+4</pre></td><td class="code"><pre># OUTPUT:
+I LOVE PRINTING!!
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">original_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="c"># Forward same arguments to the original function</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"AGAIN EXTAAAAA FUNCTIONALITY!!!"</span><span class="p">)</span>
-
-<span class="nd">@decorator</span>
-<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{a} + {b} = {a+b}'</span><span class="p">)</span>
-
-<span class="n">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
-<span class="c"># OUTPUT:</span>
-<span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-<span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">AGAIN</span> <span class="n">EXTAAAAA</span> <span class="n">FUNCTIONALITY</span><span class="err">!!!</span>
-
+The function speaker did not execute
 </pre></td></tr></tbody></table>
 </div>
 </div>
 
-<p>Let’s do something usefull now</p>
-
-<h2 id="to-do-build-a-logging-decorator">To Do: build a logging decorator</h2>
-<p><code class="highlighter-rouge">python
-def func_logger(func):
-    import logging
-    logger = logging.basicConfig(filename=f'{func.__name__}.log', level=logging.INFO)
-    def wrapper(*args):
-        logger.info(f'Function executed: {func.__name__}, with parameters: {func.__args__}')
-</code></p>
+<p>And this is it.</p>
 
   </article>
 </div>

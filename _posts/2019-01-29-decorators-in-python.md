@@ -32,12 +32,16 @@ Here is the simple example of the decorator function.
 
 ~~~python
 # Defining a decorator.
-def decorator(original_function): # Decorator takes the original function as argument
-    def wrapper(): # For now wrapper is not returning None
+# Decorator takes the original function as argument
+def decorator(original_function):
+    # For now wrapper is not returning None
+    def wrapper():
         print("EXTAAAAA FUNCTIONALITY!!!")
-        original_function() # Original function gets called here.
+        # Original function gets called here.
+        original_function()
         print("AGAIN EXTAAAAA FUNCTIONALITY!!!")
-    return wrapper # Wrapper function is returned.
+    # Wrapper function is returned.
+    return wrapper
 
 # Defining a function with limited functionality without annotating with the decorator.
 def printer():
@@ -77,13 +81,12 @@ AGAIN EXTAAAAA FUNCTIONALITY!!!
 
 Function name is wrapper
 Function name is wrapper
-
 ~~~
 
 #### Observations:
 
 1. Function `decorator` has taken a function `original_function` as input and wrapped it with other function defined inside it.
-2. There are two ways to wrap a function, 1. by annotating it with the decorator's name (line 15-17) or 2. by directly calling the decorator with original function as input and then calling the returned function (line 19-24).
+2. There are two ways to wrap a function, 1. by annotating it with the decorator's name (line 19-21) or 2. by directly calling the decorator with original function as input and then calling the returned function (line 24-28).
 3. `printer` and `speaker` both has the extra functionality we intended to add.
 4. `printer.__name__` and `speaker.__name__`  both has name `wrapper` which means the original functions did not retain their attributes. This can be fixed using a module in `functools` named `wraps` as follows. 
 
@@ -95,11 +98,14 @@ def decorator(original_function): # Decorator takes the original function as arg
     # Using a  decorator inside decorators to preserve attributes of original function.
     # Notice we are passing the original function to the wraps.
     @wraps(original_function)
-    def wrapper(): # For now wrappern is not returning None
+    # For now wrapper is not returning None
+    def wrapper():
         print("EXTAAAAA FUNCTIONALITY!!!")
-        original_function() # Original function gets called here.
+        # Original function gets called here.
+        original_function()
         print("AGAIN EXTAAAAA FUNCTIONALITY!!!")
-    return wrapper # Wrapper function is returned.
+    # Wrapper function is returned.
+    return wrapper
 
 @decorator
 def speaker():
@@ -110,6 +116,7 @@ print()
 print(f'Function name is {speaker.__name__}')
 ~~~
 ~~~
+# OUTPUT
 EXTAAAAA FUNCTIONALITY!!!
 I LOVE SPEAKING!!
 AGAIN EXTAAAAA FUNCTIONALITY!!!
@@ -125,6 +132,8 @@ def adder(a, b):
     print(f'{a} + {b} = {a+b}')
 
 adder(3, 4)
+~~~
+~~~
 # OUTPUT
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
@@ -137,12 +146,15 @@ This error makes sense because we are, in a way, calling the wrapper function an
 
 ~~~python
 # Redefining our decorator
-def decorator(original_function): 
-    def wrapper(*args, **kwargs): # Receive any number of arguments
+def decorator(original_function):
+    # Receive any number of arguments
+    def wrapper(*args, **kwargs):
         print("EXTAAAAA FUNCTIONALITY!!!")
-        original_function(*args, **kwargs) # Forward same arguments to the original function
+        # Forward same arguments to the original function
+        original_function(*args, **kwargs)
         print("AGAIN EXTAAAAA FUNCTIONALITY!!!")
-    return wrapper # Wrapper function is returned.
+    # Wrapper function is returned.
+    return wrapper
 
 # Try executing functions with and without arguments.
 @decorator
@@ -158,10 +170,9 @@ adder(3, 4)
 
 # Call function without  arguments
 printer()
-
+~~~
+~~~
 # OUTPUT:
-~~~
-~~~
 EXTAAAAA FUNCTIONALITY!!!
 3 + 4 = 7
 AGAIN EXTAAAAA FUNCTIONALITY!!!
@@ -181,20 +192,22 @@ class decorator(object):
 
     def __call__(self, *args, **kwargs):
         print("EXTAAAAA FUNCTIONALITY!!!")
-        self.original_func(*args, **kwargs) # Forward same arguments to the original function
+        # Forward same arguments to the original function
+        self.original_func(*args, **kwargs)
         print("AGAIN EXTAAAAA FUNCTIONALITY!!!")
 
+# Set the decorator
 @decorator
 def adder(a, b):
     print(f'{a} + {b} = {a+b}')
 
+# Call the decorated function
 adder(2, 3)
 
 # OUTPUT:
 EXTAAAAA FUNCTIONALITY!!!
 2 + 3 = 5
 AGAIN EXTAAAAA FUNCTIONALITY!!!
-
 ~~~
 
 Let's do something useful now. We will write a decorator which when wrapped around a function, logs the function call in a log file named after the function name itself.
@@ -202,20 +215,27 @@ Let's do something useful now. We will write a decorator which when wrapped arou
 ~~~python
 def func_logger(func):
     import logging
+    # Define formating string
     FORMAT = '%(levelname)s %(asctime)s %(message)s'
+    # Set basic configuration
     logging.basicConfig(
         format=FORMAT,filename=f'{func.__name__}.log',
         level=logging.INFO
         )
+    # Set the wrapper
     def wrapper(*args, **kwargs):
         logging.info(f'Function called: {func.__name__}, with parameters: {args}')
+        # Execute the original function and return the result
         return func(*args, **kwargs)
+    # Return the wrapper
     return wrapper
 
+# Set the decorator
 @func_logger
 def adder(a, b):
     return a+b
 
+# Call the function
 result = adder(6,7)
 ~~~
 ~~~
@@ -223,4 +243,47 @@ result = adder(6,7)
 INFO 2019-01-29 22:45:30,860 Function called: adder, with parameters: (6, 7)
 ~~~
 
-If you find any mistake in above code please comment down below I'll be happy to fix it immediately.
+In the earlier section, we passed an argument to a decorator `wraps`. Also, if you are familiar with flask, you must have seen the `@app.route('\')` decorator which takes the endpoint as an argument. How do you make the decorators with arguments?
+
+We nest the existing decorator with another decorator function which will accept the required argument and then this argument will be available for every function inside the decorator.
+
+Let's see it in example: A decorator which takes a number as argument and if the number is greater than 5 it calls the original function otherwise it does not calls it.
+
+~~~python
+# Decorator function which takes a number as an argument
+def conditional_decorator(number):
+    # Decorator which takes the function as argument
+    def original_decorator(original_function):
+        # Wrapper which executes the original function based on a condition
+        def wrapper():
+            if number > 5:
+                return original_function()
+            else:
+                print(f"The function {original_function.__name__} did not execute")
+        # Original decorator returns the wrapper
+        return wrapper
+    # Outer decorator returns the original decorator
+    return original_decorator
+
+# Using conditional_decorator 6
+@conditional_decorator(6)
+def printer():
+    print("I LOVE PRINTING!!")
+
+# Using conditional_decorator 4
+@conditional_decorator(4)
+def speaker():
+    print("I LOVE SPEAKING!!")
+
+printer()
+print()
+speaker()
+~~~
+~~~
+# OUTPUT:
+I LOVE PRINTING!!
+
+The function speaker did not execute
+~~~
+
+And this is it.
