@@ -1,0 +1,6 @@
+_site
+.sass-cache
+.directory
+Thumbs.db
+.ruby-version
+Gemfile.lock
