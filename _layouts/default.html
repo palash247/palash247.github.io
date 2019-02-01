@@ -3,6 +3,9 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 {% include head.html %}
+{% if page.use_math %}
+  {% include mathjax_support.html %}
+{% endif %}
 
 <body>
   <div class="row">
@@ -20,4 +23,5 @@
   </div>
   {% include js.html %}
 </body>
+
 </html>
