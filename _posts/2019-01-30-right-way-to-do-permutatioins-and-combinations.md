@@ -37,9 +37,7 @@ Permutation gives the number of ways you can arrange things with an emphasis on 
 The questions I have enlisted above has helped me a lot to arrive at an answer in combinatorics. If you know the number of positions, the number of options for each position and the impact of order, you can tackle any combinatorics question. You can now derive the formula for the **Permutations with Repetition** where you can repeat any element $ (n) $ for any number of times for the given number of positions $ (r) $ which is:
 
 $$
-    \begin{align\*}
-        _nP_r = n^r
-    \end{align\*}
+    _nP_r = n^r
 $$
 
 Let's step up the difficulty level a little bit and try positions and options method to validate my point.
@@ -64,9 +62,7 @@ We will try to use the same reasoning we used before,
 Don't you notice something? $ 5x4x3x2x1 = 5! $. You can generalize and derive another formula for **Permutations of n distinct elements** i.e, number of ways you can arrange $n$ distinct elements within $n$ positions:
 
 $$
-    \begin{align\*}
-        _nP_n = n!
-    \end{align\*}
+    _nP_n = n!
 $$
 
 What if, in the previous question, you had only 3 positions instead of 5?
@@ -89,9 +85,7 @@ Now, I am going to copy paste most of the stuff from above.
 The only difference we have here is we've stopped at the third position. We can generalize this by using factorial. We just need to come up with a way to stop the factorial at a desired position. In the above example, we stopped at the 3rd position because we had only 3 positions at our disposal. If we had all the 5 positions, we would have continued the factorial using with $2x1$. How do you remove $ 2x1 $ from $ 5! $, simply, by dividing $5!$ by $ 2! $. What is $ 2! $? It is factorial of total number of elements $ n $ minus the total number of positions at disposal $ r $ i.e, $ (n-r)! $. This can be generalized to:
 
 $$
-    \begin{align\*}
-        _nP_r = \frac{n!}{(n-r)!}
-    \end{align\*}
+    _nP_r = \frac{n!}{(n-r)!}
 $$
 
 Let's step up the difficulty again. What if you had some common letters in the sample list to choose from? Consider the list $[F, I, C, D, C]$, you have two $C$ and other letters are unique. What is the total number of words of length 5 that are possible using the elements of the given list exactly once? (Note: As $C$ appears two times, you can use it two times.)
@@ -131,12 +125,11 @@ Let's try another problem. You have some letters $[F, I, C, D, E]$ and you are a
 $$
     \frac{_5P_3}{3!} = \frac{120}{3!} = 20
 $$
+
 In general, number ways of choosing $r$ elements from the set of $n$ distinct elements irrespective of the order can be derived as follows:
 
 $$
-    \begin{align\*}
-        _nC_r = \frac{_nP_r}{r!} = \frac{n!}{r!(n-r)!}
-    \end{align\*}
+    _nC_r = \frac{_nP_r}{r!} = \frac{n!}{r!(n-r)!}
 $$
 
 This should be it. Of course, you need the practice to master this topic. The aim of this article is to convey the idea of doing permutations and combinations without depending on the formulas. I derived the formula to help you relate article with your textbooks. Please leave a comment if you like the post or if you have any suggestions.
