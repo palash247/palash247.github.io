@@ -23,7 +23,7 @@ It is a number ranging from $-1$ to $1$ which determines the degree of linear re
 
 Given two variables $x$ and $y$, there are three possibilities in terms of linear correlation.
 
-1. When $y$ increases with $x$, *positive correlation*
+1. When \$$y$$ increases with $x$, *positive correlation*
 2. When $y$ decreases with $x$, *negative correlation*
 3. When $y$ does not change with respect to $x$, *no correlation*
 
