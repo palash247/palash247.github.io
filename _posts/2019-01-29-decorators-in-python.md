@@ -31,7 +31,7 @@ There are, in general, two ways to define the decorators, using a class and usin
 ### Decorator function:
 Here is the simple example of the decorator function.
 
-~~~python
+{% highlight python linenos %}
 # Defining a decorator.
 # Decorator takes the original function as argument
 def decorator(original_function):
@@ -69,20 +69,20 @@ print()
 # Printing name of the functions
 print(f'The function name is {speaker.__name__}')
 print(f'The function name is {printer.__name__}')
-~~~
-~~~
-# OUTPUT
-EXTAAAAA FUNCTIONALITY!!!
-I LOVE PRINTING!!
-AGAIN EXTAAAAA FUNCTIONALITY!!!
+{% endhighlight %}
 
-EXTAAAAA FUNCTIONALITY!!!
-I LOVE SPEAKING!!
-AGAIN EXTAAAAA FUNCTIONALITY!!!
+    # OUTPUT
+    EXTAAAAA FUNCTIONALITY!!!
+    I LOVE PRINTING!!
+    AGAIN EXTAAAAA FUNCTIONALITY!!!
 
-The function name is wrapper
-The function name is wrapper
-~~~
+    EXTAAAAA FUNCTIONALITY!!!
+    I LOVE SPEAKING!!
+    AGAIN EXTAAAAA FUNCTIONALITY!!!
+
+    The function name is wrapper
+    The function name is wrapper
+
 
 #### Observations:
 
@@ -91,7 +91,7 @@ The function name is wrapper
 3. `printer` and `speaker` both have the extra functionality we intended to add.
 4. `printer.__name__` and `speaker.__name__`  both have name `wrapper` which means the original functions did not retain their attributes. This can be fixed using a module in `functools` named `wraps` as follows. 
 
-~~~python
+{% highlight python linenos %}
 from functools import wraps
 
 # Defining a decorator.
@@ -115,37 +115,37 @@ def speaker():
 speaker()
 print()
 print(f'The function name is {speaker.__name__}')
-~~~
-~~~
-# OUTPUT
-EXTAAAAA FUNCTIONALITY!!!
-I LOVE SPEAKING!!
-AGAIN EXTAAAAA FUNCTIONALITY!!!
+{% endhighlight %}
 
-The function name is speaker
-~~~
+    # OUTPUT
+    EXTAAAAA FUNCTIONALITY!!!
+    I LOVE SPEAKING!!
+    AGAIN EXTAAAAA FUNCTIONALITY!!!
+
+    The function name is speaker
+
 
 Now, what if our function had some arguments. Let's try the same decorator on a function with arguments.
 
-~~~python
+{% highlight python linenos %}
 @decorator
 def adder(a, b):
     print(f'{a} + {b} = {a+b}')
 
 adder(3, 4)
-~~~
-~~~
-# OUTPUT
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-----> adder(3,4)
+{% endhighlight %}
 
-TypeError: wrapper() takes 0 positional arguments but 2 were given
-~~~
+    # OUTPUT
+    ---------------------------------------------------------------------------
+    TypeError                                 Traceback (most recent call last)
+    ----> adder(3,4)
+
+    TypeError: wrapper() takes 0 positional arguments but 2 were given
+
 
 This error makes sense because we are, in a way, calling the wrapper function and we have defined it to take 0 arguments. Let's modify it take any number of arguments.
 
-~~~python
+{% highlight python linenos %}
 # Redefining our decorator
 def decorator(original_function):
     # Receive any number of arguments
@@ -171,22 +171,22 @@ adder(3, 4)
 
 # Call function without  arguments
 printer()
-~~~
-~~~
-# OUTPUT:
-EXTAAAAA FUNCTIONALITY!!!
-3 + 4 = 7
-AGAIN EXTAAAAA FUNCTIONALITY!!!
-EXTAAAAA FUNCTIONALITY!!!
-I LOVE PRINTING!!!
-AGAIN EXTAAAAA FUNCTIONALITY!!!
-~~~
+{% endhighlight %}
+
+    # OUTPUT:
+    EXTAAAAA FUNCTIONALITY!!!
+    3 + 4 = 7
+    AGAIN EXTAAAAA FUNCTIONALITY!!!
+    EXTAAAAA FUNCTIONALITY!!!
+    I LOVE PRINTING!!!
+    AGAIN EXTAAAAA FUNCTIONALITY!!!
+
 
 Now let's try making the same decorator using a class. The trick is to overwrite the `__call__` method of the decorator class with the wrapper function of your choice. `__call__` method allows the class's instance to be called as a function.
 
 ### Decorator class
 
-~~~python
+{% highlight python linenos %}
 class decorator(object):
     def __init__(self, original_func):
         self.original_func = original_func
@@ -204,16 +204,16 @@ def adder(a, b):
 
 # Call the decorated function
 adder(2, 3)
+{% endhighlight %}
+    # OUTPUT:
+    EXTAAAAA FUNCTIONALITY!!!
+    2 + 3 = 5
+    AGAIN EXTAAAAA FUNCTIONALITY!!!
 
-# OUTPUT:
-EXTAAAAA FUNCTIONALITY!!!
-2 + 3 = 5
-AGAIN EXTAAAAA FUNCTIONALITY!!!
-~~~
 
 Let's do something useful now. We will write a decorator which when wrapped around a function, logs the function call in a log file named after the function name itself.
 
-~~~python
+{% highlight python linenos %}
 def func_logger(func):
     import logging
     # Define formating string
@@ -238,11 +238,11 @@ def adder(a, b):
 
 # Call the function
 result = adder(6,7)
-~~~
-~~~
-# Contents of adder.log
-INFO 2019-01-29 22:45:30,860 Function called: adder, with parameters: (6, 7)
-~~~
+{% endhighlight %}
+
+    # Contents of adder.log
+    INFO 2019-01-29 22:45:30,860 Function called: adder, with parameters: (6, 7)
+
 
 In the earlier section, we passed an argument to a decorator `wraps`. Also, if you are familiar with flask, you must have seen the `@app.route('\')` decorator which takes the endpoint as an argument. How do you make the decorators with arguments?
 
@@ -250,7 +250,7 @@ We nest the existing decorator with another decorator function which will accept
 
 Let's see it in an example: A decorator which takes a number as argument and if the number is greater than 5 it calls the original function otherwise it does not calls it.
 
-~~~python
+{% highlight python linenos %}
 # Decorator function which takes a number as an argument
 def conditional_decorator(number):
     # Decorator which takes the function as argument
@@ -279,12 +279,12 @@ def speaker():
 printer()
 print()
 speaker()
-~~~
-~~~
-# OUTPUT:
-I LOVE PRINTING!!
+{% endhighlight %}
 
-The function speaker did not execute
-~~~
+    # OUTPUT:
+    I LOVE PRINTING!!
+
+    The function speaker did not execute
+
 
 And this is it.
