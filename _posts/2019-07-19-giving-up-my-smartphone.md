@@ -2,7 +2,7 @@
 layout: post
 title:  "Experiment: Giving up the smartphone" 
 modified:   2019-07-19 23:00:19
-excerpt: "Experiment: What if I don't use my smartphone for 21 days?"
+excerpt: "What if I don't use my smartphone?"
 categories: [life, experiment]
 tags: [life, experiment]
 comments: true
