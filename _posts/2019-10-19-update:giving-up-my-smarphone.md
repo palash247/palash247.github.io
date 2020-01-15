@@ -9,10 +9,10 @@ comments: true
 share: true
 pinned: false
 use_math : false
-# image:
-#     feature: https://raw.githubusercontent.com/palash247/palash247.github.io/master/img/rubik.png
-#     credit: Andrew Martin
-#     creditlink: https://pixabay.com/en/users/aitoff-388338/
+image:
+    feature: https://live.staticflickr.com/65535/48788605827_b07176c6f2_w.jpg
+    credit: Palash Karmore
+    creditlink: https://flic.kr/p/2hkhmK6
 ---
 
 To a some extent, I failed. I failed to update my blog in time too. Anyways, better late than never. Here is my experience on an attempt on Giving up my smartphone and using a Jiophone (feature phone).

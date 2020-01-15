@@ -9,10 +9,10 @@ comments: true
 share: true
 pinned: false
 use_math : false
-# image:
-#     feature: https://raw.githubusercontent.com/palash247/palash247.github.io/master/img/rubik.png
-#     credit: Andrew Martin
-#     creditlink: https://pixabay.com/en/users/aitoff-388338/
+image:
+    feature: "https://live.staticflickr.com/65535/48783916103_7cf30d898b_k.jpg" 
+    credit: Palash Karmore
+    creditlink: https://flic.kr/p/2hjSjDM
 ---
 
 I started monitoring my smartphone usage recently and I think I am obsessed with this piece of technology, particularly, to YouTube. This is my take on saving my limited time on earth and using it for doing something productive.
