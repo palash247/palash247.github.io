@@ -2,7 +2,7 @@
 layout: post
 title:  "Experiment: Giving up the smartphone" 
 modified:   2019-07-19 23:00:19
-excerpt: "What if I don't use my smartphone?"
+excerpt: "I started monitoring my smartphone usage recently and I think I am obsessed with this piece of technology, particularly, to YouTube. This is my take on saving my limited time on earth and using it for doing something productive."
 categories: [life, experiment]
 tags: [life, experiment]
 comments: true

@@ -2,7 +2,7 @@
 layout: post
 title:  "Update: Giving up the smartphone" 
 modified:   2019-07-19 23:00:19
-excerpt: "What if I don't use my smartphone?"
+excerpt: "To a some extent, I failed. I failed to update my blog in time too. Anyways, better late than never. Here is my experience on an attempt on Giving up my smartphone and using a Jiophone (feature phone)."
 categories: [life, experiment]
 tags: [life, experiment]
 comments: true
