@@ -4,8 +4,8 @@
 ####################################
 #
 title: Palash Karmore
-email: palashkarmore@gmail.com
-description: A blog for my projects.
+email: me@palashkarmore.com
+description: "Personal blog where I post anything I feel like" 
 baseurl: ""
 url: https://palashkarmore.com # the base hostname & protocol for your site
 keywords: ["Machine Learning", "Artificial Intelligence", "Python", "Java", "Deep Learning"]
