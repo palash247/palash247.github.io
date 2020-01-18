@@ -7,7 +7,7 @@ title: Palash Karmore
 email: palashkarmore@gmail.com
 description: A blog for my projects.
 baseurl: ""
-url: https://palash247.github.io # the base hostname & protocol for your site
+#url: https://palash247.github.io # the base hostname & protocol for your site
 keywords: ["Machine Learning", "Artificial Intelligence", "Python", "Java", "Deep Learning"]
 
 #
