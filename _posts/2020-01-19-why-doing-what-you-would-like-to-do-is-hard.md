@@ -3,8 +3,8 @@ layout: post
 title:  "Why is doing something you would like is hard?" 
 modified:   2020-01-19 23:00:19
 excerpt: "Let's get one thing out of the way. I don't think we are going to discover the answer to our question. I want to write. Maybe we'll get our solution on the way."
-categories: [life, experiment]
-tags: [life, experiment]
+categories: [life]
+tags: [life, passion, motivation]
 comments: true
 share: true
 pinned: false
