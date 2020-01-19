@@ -2,7 +2,7 @@
 layout: post
 title:  "Why is doing something you would like is hard?" 
 modified:   2020-01-19 23:00:19
-excerpt: "To a some extent, I failed. I failed to update my blog in time too. Anyways, better late than never. Here is my experience on an attempt on Giving up my smartphone and using a Jiophone (feature phone)."
+excerpt: "Let's get one thing out of the way. I don't think we are going to discover the answer to our question. I want to write. Maybe we'll get our solution on the way."
 categories: [life, experiment]
 tags: [life, experiment]
 comments: true
@@ -10,9 +10,9 @@ share: true
 pinned: false
 use_math : false
 image:
-    feature: https://live.staticflickr.com/65535/48783925758_8f35623064_b.jpg
+    feature: https://images.unsplash.com/photo-1579447194694-6d66ef517b7a?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250    
     credit: Palash Karmore
-    creditlink: https://flic.kr/p/2hjSnwf
+    creditlink: https://unsplash.com/photos/jAXFPGLKO1w
 ---
 
 Let's get one thing out of the way. I don't think we are going to discover the answer to our question. I want to write. Maybe we'll get our solution on the way.
