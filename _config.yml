@@ -1,18 +1,21 @@
 title: Palash Karmore
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://palashkarmore.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-highlight: rouge
-input: GFM
-permalink: /:title/
+highlighter: rouge
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+permalink: /articles/:year-:month/:title
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-archives
+  # - jekyll-archives
+  - jekyll-sitemap
 
 sass:
   style: compressed
@@ -55,17 +58,17 @@ paginate: 5
 paginate_path: "/page:num/"
 
 # Archives
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - tags
-  layouts:
-    year: year-archive
-    month: month-archive
-    tag: tag-archive
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    tag: '/tag/:name/'
+# jekyll-archives:
+#   enabled:
+#     - year
+#     - month
+#     - tags
+#   layouts:
+#     year: year-archive
+#     month: month-archive
+#     tag: tag-archive
+#   permalinks:
+#     year: '/:year/'
+#     month: '/:year/:month/'
+#     tag: '/tag/:name/'
 
