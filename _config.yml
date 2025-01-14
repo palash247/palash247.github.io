@@ -9,6 +9,7 @@ highlighter: rouge
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+  input: GFM
 permalink: /articles/:year-:month/:title
 plugins:
   - jekyll-feed
@@ -58,18 +59,18 @@ paginate: 5
 paginate_path: "/page:num/"
 
 # Archives
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - tags
-  layout: 'archive'
-  layouts:
-    year: year-archive
-    month: month-archive
-    tag: tag-archive
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    tag: '/tag/:name/'
+# jekyll-archives:
+#   enabled:
+#     - year
+#     - month
+#     - tags
+#   layout: 'archive'
+#   layouts:
+#     year: year-archive
+#     month: month-archive
+#     tag: tag-archive
+#   permalinks:
+#     year: '/:year/'
+#     month: '/:year/:month/'
+#     tag: '/tag/:name/'
 
