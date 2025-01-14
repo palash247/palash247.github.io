@@ -2,17 +2,15 @@
 layout: default
 ---
 <article class="post">
-    <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% if page.tags %}
-<div class="post-tags">
-  Tags:
-  {% for tag in page.tags %}
+  <h1>{{ page.title }}</h1>
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+  {% if page.tags %}
+  <div class="post-tags">
+    Tags:
+    {% for tag in page.tags %}
     <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
-  {% endfor %}
-</div>
-{% endif %}
-    {{ content }}
-    {% include disqus_comments.html %}
+    {% endfor %}
+  </div>
+  {% endif %}
+  {{ content }}
 </article>
-
