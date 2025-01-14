@@ -27,11 +27,11 @@ Given two variables $x$ and $y$, there are three possibilities in terms of linea
 2. When $y$ decreases with $x$, *negative correlation*
 3. When $y$ does not change with respect to $x$, *no correlation*
 
-| ![space-1.jpg](https://raw.githubusercontent.com/palash247/palash247.github.io/master/img/pearson_correlation.png) | 
+| ![space-1.jpg]({{ '/assets/images/pearson_correlation.png' | relative_url }}) | 
 |:--:| 
 | *Credit:* [StatisticsHowTo](https://www.statisticshowto.datasciencecentral.com/probability-and-statistics/correlation-coefficient-formula/#Pearson) |
 
-You can see all three cases in the figure above. The figure shows scatter plot of points $(x,y)$ for three different condition. Notice, when the $y$ is increasing with $x$ the value of $r$ is positive and when it is decreasing with $x$ the value of $r$ is negative. Also, in figure with no correlation, you can not find any straight line which can summarize the trend in the data, making the value of $r$ zero.
+Yoe can see all three cases in the figure above. The figure shows scatter plot of points $(x,y)$ for three different condition. Notice, when the $y$ is increasing with $x$ the value of $r$ is positive and when it is decreasing with $x$ the value of $r$ is negative. Also, in figure with no correlation, you can not find any straight line which can summarize the trend in the data, making the value of $r$ zero.
 
 If the value of $r$ was $1$, the conclusion would be, all the points in the scatter plot are on the same line which has a positive slope. If the value of $r$ is $-1$, all the points in the scatter plot are on the same line with negative slope. Values closer to 1 or $-1$ depicts a strong correlation. Whereas values, closer to 0, depicts a weak correlation.
 
@@ -45,14 +45,16 @@ $$
 \end{aligned}
 $$
 
-Where,
-$n$ = number of elements in the sample,
-$zx_i$ = $z$-score of $i^{th}$ element of $x$:
-$$ zx_i = \frac{x_i-\bar{x}}{s_x}$$
-$s_x$ being standard deviation of x
-$zy_i$ = $z$-score of $i^{th}$ element of $y$:
-$$ zy_i = \frac{y_i-\bar{y}}{s_y} $$
-$s_y$ being standard deviation of y
+Where,<br>
+<p>
+$n$ = number of elements in the sample,<br>
+$ zx_i $ = $ z $-score of $i^{th}$ element of $x$,<br>
+$ zx_i = \frac{x_i-\bar{x}}{s_x}$,<br>
+$s_x$ being standard deviation of $x$,<br>
+$zy_i$ = $z$-score of $i^{th}$ element of $y$,<br>
+$ zy_i = \frac{y_i-\bar{y}}{s_y} $,<br>
+$s_y$ being standard deviation of $y$<br>
+</p>
 
 This equation can be further solved but I find above version easy to remember and intuitive. Let's substitute values of $z$-scores $(zx_i, zy_i)$ and standard deviations $(s_x, s_y)$ in above equation.
 
