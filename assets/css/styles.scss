@@ -1,0 +1,186 @@
+// Variables
+$primary-color: #333;
+$secondary-color: #666;
+$background-color: #fff;
+$accent-color: #0077b5;
+$code-background: #f4f4f4;
+$code-color: #333;
+
+// Dark theme variables
+$dark-primary-color: #e0e0e0;
+$dark-secondary-color: #b0b0b0;
+$dark-background-color: #1a1a1a;
+$dark-accent-color: #4da3ff;
+$dark-code-background: #2d2d2d;
+$dark-code-color: #f4f4f4;
+
+@mixin dark-theme {
+  --primary-color: #{$dark-primary-color};
+  --secondary-color: #{$dark-secondary-color};
+  --background-color: #{$dark-background-color};
+  --accent-color: #{$dark-accent-color};
+  --code-background: #{$dark-code-background};
+  --code-color: #{$dark-code-color};
+}
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --background-color: #{$background-color};
+  --accent-color: #{$accent-color};
+  --code-background: #{$code-background};
+  --code-color: #{$code-color};
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.dark-theme {
+    @include dark-theme;
+  }
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+
+    li {
+      margin-left: 20px;
+    }
+  }
+}
+
+.site-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+time {
+  color: var(--secondary-color);
+  font-size: 0.9em;
+}
+
+article.post {
+  margin-top: 40px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 0.9em;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+// Code block styling
+pre,
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  background-color: var(--code-background);
+  color: var(--code-color);
+  border-radius: 3px;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+
+  code {
+    padding: 0;
+  }
+}
+
+// Math expression styling
+.MathJax {
+  font-size: 1.1em;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+
+    ul {
+      margin-top: 10px;
+
+      li {
+        margin-left: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light-theme) {
+    @include dark-theme;
+  }
+}

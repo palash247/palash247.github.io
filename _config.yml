@@ -1,75 +1,71 @@
-#
-###################################
-# Site wide configuration
-####################################
-#
 title: Palash Karmore
-email: me@palashkarmore.com
-description: "Personal blog where I post anything I feel like" 
-baseurl: ""
-url: https://palashkarmore.com # the base hostname & protocol for your site
-keywords: ["Machine Learning", "Artificial Intelligence", "Python", "Java", "Deep Learning", "Palash", "Karmore", "PalashKarmore"]
+description: ""
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+highlight: rouge
+input: GFM
+permalink: /:title/
 plugins:
-    - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-archives
 
+sass:
+  style: compressed
 
-#
-###################################
-# Jekyll configuration
-####################################
-#
-timezone:          India/Delhi
-markdown:          kramdown
-highlighter:       rouge
-excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
-  # Line numbers in code block
-  # syntax_highlighter_opts:
-  #   block:
-  #     line_numbers: true
+disqus:
+  shortname: palashkarmore
 
-#
-###################################
-# Site Owner configuration
-####################################
-#
-owner:
+# Theme settings
+theme_settings:
+  default: system
+  options:
+    - light
+    - dark
+    - system
+
+# Author information
+author:
   name: Palash Karmore
-  avatar: palash-dp.jpg
-  job: "Life|Software Engineering|Machine Learning"
-  bio: "Persuite of ikigai"
-  email: me@palashkarmore.com
-  disqus-shortname: palash247
-  twitter: palashvk #username
-  facebook: palash247
-  google:
-    plus: #username
-    analytics: UA-56347465-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: palash247 #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: palash-karmore #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
-  telegram: #username
+  photo: /assets/images/profile.jpg
+  bio: ""
+
+# Social profiles
+social:
+  x: palashvk
+  github: palash247
+  linkedin: palash-karmore
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Archives
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - tags
+  layouts:
+    year: year-archive
+    month: month-archive
+    tag: tag-archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    tag: '/tag/:name/'
+

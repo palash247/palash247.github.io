@@ -1,21 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {% if page.layout == 'home' %}
+    {{ site.title }}
+    {% elsif page.title %}
+    {{ page.title }} - {{ site.title }}
+    {% else %}
+    {{ site.title }}
+    {% endif %}
+  </title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
+  {% seo title=false %}
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\$$', '\$$']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
 <body>
-  <div class="row">
-    <div class="col s12 m3">
-      <div class="table cover">
-        {% include sidebar.html %}
-      </div>
-    </div>
-    <div class="col s12 m9">
-      <div class="post-listing">
-        {{ content }}
-        {% include footer.html %}
-      </div>
-    </div>
-  </div>
-  {% include js.html %}
+  <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function setTheme(theme) {
+      if (theme === 'system') {
+        localStorage.removeItem('theme');
+        document.body.classList.toggle('dark-theme', prefersDarkScheme.matches);
+      } else {
+        document.body.classList.toggle('dark-theme', theme === 'dark');
+        localStorage.setItem('theme', theme);
+      }
+      updateToggleButton(theme);
+    }
+
+    function updateToggleButton(theme) {
+      themeToggle.textContent = theme === 'dark' ? '☀️' : theme === 'light' ? '🌙' : '🖥️';
+      themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark'} mode`);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = localStorage.getItem('theme') || 'system';
+      const newTheme = currentTheme === 'light' ? 'dark' : currentTheme === 'dark' ? 'system' : 'light';
+      setTheme(newTheme);
+    });
+
+    prefersDarkScheme.addListener((e) => {
+      if (!localStorage.getItem('theme')) {
+        setTheme('system');
+      }
+    });
+
+    const savedTheme = localStorage.getItem('theme');
+    setTheme(savedTheme || 'system');
+  </script>
 </body>
 
 </html>

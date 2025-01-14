@@ -1,4 +1,0 @@
-- name: One Commit a Day
-  link: https://www.beeminder.com/palash247/one_commit_a_day
-  iframe: <iframe src="https://www.beeminder.com/widget?slug=one_commit_a_day&username=palash247&countdown=true" height="245px" width="230px" frameborder="0px" ></iframe>
-  description: My GitHub profile is not what I'd have liked it to be, and hence I want to push at least one commit a day on average. I hope, one day I like my GitHub profile.

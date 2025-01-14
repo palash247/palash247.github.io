@@ -1,8 +1,0 @@
-- name: Human activity recognition from smartphone 
-  descr: "Smartphones have sensors to detect their orientation. We exploit these sensors to perform human activity recognition."
-  github: https://github.com/palash247/Human-Activity-Recognition.git
-
-- name: Teachable Machine
-  descr: "Inspired from Teachabel Machine project from withgoogle, I tried to replicate the code in python."
-  github: https://github.com/palash247/Teachable-Machine.git
-

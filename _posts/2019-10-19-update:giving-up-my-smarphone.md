@@ -9,10 +9,10 @@ comments: true
 share: true
 pinned: false
 use_math : false
-image:
-    feature: https://images.unsplash.com/photo-1579447358129-cf611f308f0c?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
-    credit: Palash Karmore
-    creditlink: https://unsplash.com/photos/QnPDBJi13HI
+# image:
+#     feature: https://images.unsplash.com/photo-1579447358129-cf611f308f0c?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
+#     credit: Palash Karmore
+#     creditlink: https://unsplash.com/photos/QnPDBJi13HI
 ---
 
 To a some extent, I failed. I failed to update my blog in time too. Anyways, better late than never. Here is my experience on an attempt on Giving up my smartphone and using a Jiophone (feature phone).

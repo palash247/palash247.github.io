@@ -1,0 +1,31 @@
+<header>
+  <div class="profile-section">
+    <img src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}" class="profile-photo">
+    <div class="profile-info">
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <p class="author-bio">{{ site.author.bio }}</p>
+      <div class="social-icons">
+        {% if site.social.x %}
+        <a href="https://x.com/{{ site.social.x }}" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-twitter"></i></a>
+        {% endif %}
+        {% if site.social.github %}
+        <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-github"></i></a>
+        {% endif %}
+        {% if site.social.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-linkedin"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+      <li><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
+      <li><a href="{{ '/tags/' | relative_url }}">Tags</a></li>
+    </ul>
+  </nav>
+</header>

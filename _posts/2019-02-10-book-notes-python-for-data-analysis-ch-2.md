@@ -20,15 +20,11 @@ use_math : true
 
 Pandas name is derived from *panel data* and *python data analysis*
 
-
-~~~python
+{% highlight python %}
 import numpy as np
 # add wildcards and then use object introspection to see matching attributes/methods
 np.*lin*?
-~~~
 
-
-~~~python
 adder = """
 def adder(a,b,c):
     return a+b+c
@@ -58,7 +54,7 @@ with open("adder.py", "w") as f:
 x, y, z = (2,5,6)
 %run -i adder.py
 print(x,y,z, result)
-~~~
+{% endhighlight %}
 
     1 2 3.4 6.4
     2 5 6 13

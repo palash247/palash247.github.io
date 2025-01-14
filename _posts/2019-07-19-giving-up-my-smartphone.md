@@ -9,10 +9,6 @@ comments: true
 share: true
 pinned: false
 use_math : false
-image:
-    feature: "https://images.unsplash.com/photo-1579447269275-562de21d33c3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250" 
-    credit: Palash Karmore
-    creditlink: https://unsplash.com/photos/Suz0ltCAps8
 ---
 
 I started monitoring my smartphone usage recently and I think I am obsessed with this piece of technology, particularly, to YouTube. This is my take on saving my limited time on earth and using it for doing something productive.
