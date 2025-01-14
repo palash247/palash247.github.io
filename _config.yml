@@ -31,7 +31,7 @@ exclude:
   - vendor/ruby/
 
 disqus:
-  shortname: palashkarmore
+  shortname: palash247
 
 # Theme settings
 theme_settings:
